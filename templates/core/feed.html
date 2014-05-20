@@ -10,6 +10,7 @@
         {% for activity in feed_pins %}
             {% with activity.pin as pin %}
                 {% include "core/_pin.html" with item=pin %}
+                <span>{{activity.extra_context.item_message}}</span>
             {% endwith %}
         {% endfor %}
     </div>
